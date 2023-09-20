@@ -1,29 +1,35 @@
-import Link from 'next/link'
-import React from 'react'
+"use client"
+import React, { MutableRefObject, useRef, useState } from 'react'
+import Sidebar from './Sidebar/Sidebar'
+import MobileSidebar from './Sidebar/MobileSidebar'
+import Image from 'next/image'
+import { useOnClickOutside } from '@/hooks/useOutsideClick'
 
 const AdminLayout = ({ children }: { children: React.ReactNode }) => {
+    const [showSidebar, setShowSidebar] = useState(false)
+
+    const handleSidebarToggle = () => setShowSidebar((prev) => !prev);
+
+    const ref: MutableRefObject<undefined> = useRef()
+    useOnClickOutside(ref, () => setShowSidebar(false))
+
     return (
-        <main className='flex w-full h-full'>
-            <section className='h-full w-[228px] max-w-[228px] border-r-[1px solid rgb(230, 230, 230)] fixed text-white bg-black'>
-                <section className='py-0 px-[15px]'>
-                    <section className='py-[40px] flex justify-center'>
-                        logo
-                    </section>
-                    <nav className='mt-[50px]'>
-                        <ul>
-                            <li className='py-[10px] px-[14px]'><Link href="/products">Products</Link></li>
-                            <li className='py-[10px] px-[14px]'><Link href="/sales">Sales</Link></li>
-                        </ul>
-                    </nav>
-
-                </section>
-
-
-            </section>
-            <section className='flex-1 pl-[278px] h-full p-r-[50px] bg-[#f7f7f7] max-w-[3200px]'>
+        <main
+            //@ts-ignore
+            ref={ref} className='flex w-full h-full'>
+            <MobileSidebar isOpen={showSidebar} />
+            <Sidebar  />
+            <section className='lg:flex-1 w-[95%] lg:w-full mx-auto lg:mx-0 lg:pl-[278px] lg:pr-[50px] bg-[#f7f7f7] max-w-[3200px]'>
                 <main>
-                    <section className='sticky top-0 z-[999] pt-[50px] pb-[20px] bg-[#f7f7f7]'>header</section>
-                    <div>
+                    <section className='sticky top-0 z-[999] pt-[50px] pb-[20px] bg-[#f7f7f7] flex items-center max-w-[1100px]'>
+                        <h1><span>Welcome,</span> Kelvin! 👋🏼</h1>
+
+
+                        <button onClick={handleSidebarToggle} className=' w-10 h-10 bg-white rounded-full flex lg:hidden items-center justify-center ml-auto'>
+                            <Image height={18} width={18} src="/images/hamburger.svg" alt='hamburger' />
+                        </button>
+                    </section>
+                    <div className='max-w-[1100px]'>
                         {children}
                     </div>
                 </main>
