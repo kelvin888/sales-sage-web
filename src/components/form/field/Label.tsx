@@ -26,4 +26,6 @@ const Label = React.forwardRef<HTMLLabelElement, FieldLabelProps>(
     );
   },
 );
+
+Label.displayName = "InputLabel"
 export default Label;

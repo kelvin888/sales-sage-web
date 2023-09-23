@@ -1,6 +1,6 @@
 import React from 'react';
-import Icon from '../../Icon';
-import { faExclamationCircle } from '@fortawesome/pro-regular-svg-icons';
+// import Icon from '../../Icon';
+// import { faExclamationCircle } from '@fortawesome/pro-regular-svg-icons';
 import clsx from 'clsx';
 
 const Error = React.forwardRef<
@@ -20,10 +20,12 @@ const Error = React.forwardRef<
       )}
       {...props}
     >
-      <Icon icon={faExclamationCircle} />
+      {/* <Icon icon={faExclamationCircle} /> */}
       {children}
     </div>
   );
 });
+
+Error.displayName = "InputError"
 
 export default Error;

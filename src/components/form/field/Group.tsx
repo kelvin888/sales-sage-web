@@ -16,4 +16,6 @@ const Group = React.forwardRef<
   );
 });
 
+Group.displayName = "InputGroup"
+
 export default Group;

@@ -40,4 +40,6 @@ const Caption = React.forwardRef<HTMLDivElement, CaptionProps>(
   },
 );
 
+Caption.displayName = "InputCaption"
+
 export default Caption;
