@@ -18,7 +18,7 @@ const AdminLayout = ({ children }: { children: React.ReactNode }) => {
             //@ts-ignore
             ref={ref} className='flex w-full h-full'>
             <MobileSidebar isOpen={showSidebar} />
-            <Sidebar  />
+            <Sidebar />
             <section className='lg:flex-1 w-[95%] lg:w-full mx-auto lg:mx-0 lg:pl-[278px] lg:pr-[50px] bg-[#f7f7f7] max-w-[3200px]'>
                 <main>
                     <section className='sticky top-0 z-[999] pt-[50px] pb-[20px] bg-[#f7f7f7] flex items-center max-w-[1100px]'>
