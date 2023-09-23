@@ -11,6 +11,7 @@ const Sidebar = () => {
                 </section>
                 <nav className='mt-[50px]'>
                     <ul>
+                        <li className='py-[10px] px-[14px]'><Link href="/dashboard">Dashboard</Link></li>
                         <li className='py-[10px] px-[14px]'><Link href="/products">Products</Link></li>
                         <li className='py-[10px] px-[14px]'><Link href="/sales">Sales</Link></li>
                     </ul>
