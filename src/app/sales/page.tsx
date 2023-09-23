@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import AdminLayout from '../../components/AdminLayout/AdminLayout'
+import AdminLayout from '../../components/layout/AdminLayout'
 
 const Sales = () => {
 
