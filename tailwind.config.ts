@@ -9,17 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-<<<<<<< Updated upstream
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-=======
         'login-bg': "url('/images/store-background.jpeg')",
         instagram:
         'linear-gradient(to left bottom,  #DB01AD, #FA0116, #FFC801)',
       }
->>>>>>> Stashed changes
     },
     fontFamily: {
 
