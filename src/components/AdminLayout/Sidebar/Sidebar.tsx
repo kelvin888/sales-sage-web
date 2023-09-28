@@ -4,7 +4,7 @@ import React from 'react'
 
 const Sidebar = () => {
     return (
-        <section className={`h-full w-[228px] -left-[228px] lg:left-0 max-w-[228px] border-r-[1px solid rgb(230, 230, 230)] fixed text-white bg-black transition-all ease-linear z-[1000]`}>
+        <section className={`h-full w-[228px] -left-[228px] lg:left-0 max-w-[228px] border-r-[1px solid rgb(230, 230, 230)] fixed text-white bg-primary-900 transition-all ease-linear z-[1000]`}>
             <section className='py-0 px-[15px]'>
                 <section className='py-[40px] flex justify-center'>
                     <Image src="/images/logo.png" width={100} height={40} alt='logo' />
