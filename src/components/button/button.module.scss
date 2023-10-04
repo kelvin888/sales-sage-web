@@ -1,0 +1,45 @@
+.btn {
+  width: 100%;
+  padding: 1.3rem 0;
+  text-align: center;
+  border: none;
+  outline: none;
+  background-color: black;
+  cursor: pointer;
+}
+
+.btn-primary {
+  @include box($border: 1px solid $btn_primary, $radius: 8px);
+  @include box-shadow(3px 8px 10px 0px rgba(0, 0, 0, 0.1));
+  color: $text_white;
+  background-color: $btn_primary;
+  &:hover {
+    background-color: darken($color: $btn_primary, $amount: 10%);
+    color: $text_white;
+  }
+}
+.btn-secondary {
+  @include box($border: 1px solid $border_primary, $radius: 8px);
+  @include box-shadow(3px 8px 10px 0px rgba(153, 153, 153, 0.1));
+  color: $text_primary;
+  background-color: $btn_secondary;
+  &:hover {
+    background-color: lighten($color: $btn_primary, $amount: 50%);
+  }
+}
+
+.btn-disabled {
+  @include box(
+    $border: 2px solid darken($color: $bg_white, $amount: 15%),
+    $radius: 8px
+  );
+  color: $text_black;
+  background-color: darken($color: $bg_white, $amount: 10%);
+  cursor: auto;
+  opacity: 0.5;
+
+  &:hover {
+    color: $text_black;
+    background-color: darken($color: $bg_white, $amount: 10%);
+  }
+}

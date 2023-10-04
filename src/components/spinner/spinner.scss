@@ -1,0 +1,9 @@
+@keyframes custom-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-custom-spin {
+  animation: custom-spin 1s linear infinite;
+}
